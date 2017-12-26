@@ -1,0 +1,14 @@
+TYPO3:
+  Neos:
+    typoScript:
+      autoInclude:
+        'DasOe.SimpleTeaser': TRUE
+    modules:
+      management:
+        submodules:
+            teaserManagement:
+                label: 'Teaser-Verwaltung'
+                controller: 'DasOe\SimpleTeaser\Controller\BackendController'
+                description: 'Teaser-Verwaltung'
+                icon: 'icon-star'
+                privilegeTarget: 'DasOe.SimpleTeaser:BackendModule'

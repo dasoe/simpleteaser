@@ -1,0 +1,53 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<div class="neos-content neos-container-fluid">
+
+    <h2>Neuen Teaser anlegen</h2>
+    <f:form action="create" objectName="newTeaser" enctype="multipart/form-data" id="newTeaser">
+
+
+        <div class="neos-control-group">
+            <div class="neos-controls">
+                <label for="header">Überschrift</label>
+                <f:form.textfield property="header" id="header" class="required"/>
+            </div>
+        </div>
+
+        <div class="neos-control-group">
+            <div class="neos-controls">
+                <label for="description">Text</label>
+                <f:form.textarea property="description" rows="5" cols="30" id="description" />
+            </div>
+        </div>
+
+        <div class="neos-control-group">
+            <div class="neos-controls">
+                <label for="image">Bild</label>
+                <f:form.upload property="image.resource" id="image" class="required"/>
+            </div>
+        </div>
+
+        <div class="neos-control-group">
+            <label class="neos-control-label" for="border">Rahmen um Bild</label>
+            <div class="neos-controls neos-controls-row">
+                <label class="neos-checkbox">
+                    <f:form.checkbox property="border" value="1" /><span></span>
+                </label>
+            </div>
+        </div>        
+
+        <div class="neos-control-group">
+            <div class="neos-controls">
+                <label for="linkTo">Link To</label>
+                <f:form.textfield property="linkTo" id="linkTo" />
+            </div>
+        </div>
+
+
+        <div class="neos-form-actions neos-footer">
+            <div class="pull-right">
+                <f:form.submit class="neos-btn neos-button-primary neos-button"  name="submit" value="Teaser speichern" />
+            </div>
+        </div>
+    </f:form>
+
+</div>

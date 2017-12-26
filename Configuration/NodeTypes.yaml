@@ -1,0 +1,6 @@
+'DasOe.SimpleTeaser:Plugin':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Simple Teaser'
+    group: 'general'

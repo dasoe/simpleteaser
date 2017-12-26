@@ -1,0 +1,18 @@
+privilegeTargets:
+  TYPO3\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    'DasOe.SimpleTeaser:StandardControllerActions':
+      matcher: 'method(DasOe\SimpleTeaser\Controller\StandardController->(index)Action())'
+
+    'DasOe.SimpleTeaser:BackendModule':
+      matcher: 'method(DasOe\SimpleTeaser\Controller\BackendController->.*Action())'
+
+
+roles:
+  'TYPO3.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'DasOe.SimpleTeaser:StandardControllerActions'
+        permission: GRANT
+      -
+        privilegeTarget: 'DasOe.SimpleTeaser:BackendModule'
+        permission: GRANT

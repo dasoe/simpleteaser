@@ -1,0 +1,6 @@
+prototype(DasOe.SimpleTeaser:Plugin) < prototype(TYPO3.Neos:Plugin)
+prototype(DasOe.SimpleTeaser:Plugin) {
+      package = 'DasOe.SimpleTeaser'
+      controller = 'Standard'
+      action = 'index'
+}

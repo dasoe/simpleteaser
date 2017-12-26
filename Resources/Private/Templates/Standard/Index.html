@@ -1,0 +1,71 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="Title">Teasers (<f:count>{teasers}</f:count>)</f:section>
+
+<f:section name="Content">
+
+    <div class="seenInTheShop">
+    Seen in the <f:link.external uri="shop.loveprototo.com">love pro toto shop:</f:link.external>
+    </div>
+    <table class="simpleTeaserTable">
+        <tr>
+            <!-- 
+            <td>
+                Platz für Partner
+            </td>
+            -->
+
+        <f:for each="{teasers}" as="teaser">
+            <td>
+                <!--<table class="oneSimpleTeaser">
+                    <tr>
+                        <td> -->
+                            <div class="teaserImage">
+                                <f:if condition="{teaser.image}" >
+                                    <f:if condition="{teaser.linkTo}" >
+                                        <f:then>
+                                            <f:link.external uri="{teaser.linkTo}">
+                                                    <media:image image="{teaser.image}" maximumHeight="200" alt="sample" />
+
+                                            </f:link.external>
+                                        </f:then>
+                                        <f:else>
+                                            <media:image image="{teaser.image}" maximumHeight="200" alt="sample" />
+                                        </f:else>
+
+                                    </f:if> 
+
+                                </f:if>
+                            </div>
+
+
+                            <div class="teaserText">
+                                <f:link.external uri="{teaser.linkTo}">
+                                <strong>{teaser.header}</strong>
+                                </f:link.external>
+                                
+                                <!--
+                                <p><f:format.nl2br>{teaser.description}</f:format.nl2br></p>
+                                <p>
+                                <f:if condition="{teaser.linkTo}" >
+                                    <f:link.external uri="{teaser.linkTo}">more...</f:link.external>
+                                </f:if>
+                                </p>-->
+                            </div>
+                         <!--   
+                        </td>
+                    </tr>
+                </table>
+                         -->
+            </td>
+        </f:for>
+
+        </tr>
+
+    </table>
+
+
+</f:section>

@@ -1,0 +1,37 @@
+.DasOe_SimpleTeaser table.simpleTeaserTable {
+    background: #e4231f;
+    width:100%;
+}
+
+.DasOe_SimpleTeaser table.simpleTeaserTable tr td {
+    padding:26px 0 18px 0;
+    text-align:center;
+    vertical-align:top;
+    min-width:200px;
+}
+
+.DasOe_SimpleTeaser table.simpleTeaserTable tr td table.oneSimpleTeaser tr td {
+    padding:4px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.DasOe_SimpleTeaser table.simpleTeaserTable tr td  a,
+.DasOe_SimpleTeaser table.simpleTeaserTable tr td  a:hover,
+.DasOe_SimpleTeaser table.simpleTeaserTable tr td  a:visited {
+    color:white;
+}
+
+
+.DasOe_SimpleTeaser .teaserText {
+    padding-top:12px;
+}
+
+.DasOe_SimpleTeaser .seenInTheShop,
+.DasOe_SimpleTeaser .seenInTheShop a,
+.DasOe_SimpleTeaser .seenInTheShop a:hover,
+.DasOe_SimpleTeaser .seenInTheShop a:visited {
+    font-family:Verdana,Helvetica,Arial,sans-serif;
+    color:#888;
+}
+
