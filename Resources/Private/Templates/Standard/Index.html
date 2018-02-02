@@ -7,65 +7,66 @@
 
 <f:section name="Content">
 
-    <div class="seenInTheShop">
-    Seen in the <f:link.external uri="shop.loveprototo.com">love pro toto shop:</f:link.external>
-    </div>
-    <table class="simpleTeaserTable">
-        <tr>
-            <!-- 
-            <td>
-                Platz für Partner
-            </td>
-            -->
+    <f:if condition="{f:count(subject: teasers)}>4" >
 
-        <f:for each="{teasers}" as="teaser">
-            <td>
-                <!--<table class="oneSimpleTeaser">
-                    <tr>
-                        <td> -->
-                            <div class="teaserImage">
-                                <f:if condition="{teaser.image}" >
-                                    <f:if condition="{teaser.linkTo}" >
-                                        <f:then>
-                                            <f:link.external uri="{teaser.linkTo}">
-                                                    <media:image image="{teaser.image}" maximumHeight="200" alt="sample" />
+        <div class="dividerDiv">
+            <!--  < Seen in the <f:link.external uri="shop.loveprototo.com" target="_blank">love pro toto shop:</f:link.external> -->
+        </div>
+        <table class="simpleTeaserTable">
+            <tr>
+                <td class="labelCell">
+                    <img src="{f:uri.resource(path: 'resource://DasOe.SimpleTeaser/Public/Pics/gallery_138.png')}" alt="facebook" title="facebook">
+                </td>
 
-                                            </f:link.external>
-                                        </f:then>
-                                        <f:else>
-                                            <media:image image="{teaser.image}" maximumHeight="200" alt="sample" />
-                                        </f:else>
+            <f:for each="{teasers}" as="teaser">
+                <td>
+                    <!--<table class="oneSimpleTeaser">
+                        <tr>
+                            <td> -->
+                    <div class="teaserImage">
+                        <f:if condition="{teaser.image}" >
+                            <f:if condition="{teaser.linkTo}" >
+                                <f:then>
+                                    <f:link.external uri="{teaser.linkTo}" target="_blank">
+                                        <media:image image="{teaser.image}" maximumHeight="90" alt="sample" />
 
-                                    </f:if> 
+                                    </f:link.external>
+                                </f:then>
+                                <f:else>
+                                    <media:image image="{teaser.image}" maximumHeight="90" alt="sample" />
+                                </f:else>
 
-                                </f:if>
-                            </div>
+                            </f:if> 
+
+                        </f:if>
+                    </div>
 
 
-                            <div class="teaserText">
-                                <f:link.external uri="{teaser.linkTo}">
-                                <strong>{teaser.header}</strong>
-                                </f:link.external>
-                                
-                                <!--
-                                <p><f:format.nl2br>{teaser.description}</f:format.nl2br></p>
-                                <p>
-                                <f:if condition="{teaser.linkTo}" >
-                                    <f:link.external uri="{teaser.linkTo}">more...</f:link.external>
-                                </f:if>
-                                </p>-->
-                            </div>
-                         <!--   
-                        </td>
-                    </tr>
-                </table>
-                         -->
-            </td>
-        </f:for>
+                    <div class="teaserText">
+                        <f:link.external uri="{teaser.linkTo}" target="_blank">
+                            <strong>{teaser.header}</strong>
+                        </f:link.external>
 
-        </tr>
+                        <!--
+                        <p><f:format.nl2br>{teaser.description}</f:format.nl2br></p>
+                        <p>
+                        <f:if condition="{teaser.linkTo}" >
+                            <f:link.external uri="{teaser.linkTo}">more...</f:link.external>
+                        </f:if>
+                        </p>-->
+                    </div>
+                    <!--   
+                   </td>
+               </tr>
+           </table>
+                    -->
+                </td>
+            </f:for>
 
-    </table>
+            </tr>
 
+        </table>
+
+    </f:if> 
 
 </f:section>

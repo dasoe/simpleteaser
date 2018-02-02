@@ -1,13 +1,15 @@
 .DasOe_SimpleTeaser table.simpleTeaserTable {
-    background: #e4231f;
+    /*background: #e4231f;*/
+    background: #d9d9d9;
     width:100%;
+    border-right:10px solid #d9d9d9;
 }
 
 .DasOe_SimpleTeaser table.simpleTeaserTable tr td {
-    padding:26px 0 18px 0;
+    padding:16px 0 10px 0;
     text-align:center;
     vertical-align:top;
-    min-width:200px;
+    min-width:90px;
 }
 
 .DasOe_SimpleTeaser table.simpleTeaserTable tr td table.oneSimpleTeaser tr td {
@@ -16,10 +18,22 @@
     vertical-align:top;
 }
 
+.DasOe_SimpleTeaser table.simpleTeaserTable tr td.labelCell {
+    padding:0;
+    background:white;
+    border-right:10px solid #d9d9d9;
+    min-width:70px;
+    width:70px;
+    vertical-align: middle;
+    padding-right:13px;
+}
+
 .DasOe_SimpleTeaser table.simpleTeaserTable tr td  a,
 .DasOe_SimpleTeaser table.simpleTeaserTable tr td  a:hover,
 .DasOe_SimpleTeaser table.simpleTeaserTable tr td  a:visited {
     color:white;
+    color:#e4231f;
+    color:#898989;
 }
 
 
@@ -27,10 +41,17 @@
     padding-top:12px;
 }
 
-.DasOe_SimpleTeaser .seenInTheShop,
-.DasOe_SimpleTeaser .seenInTheShop a,
-.DasOe_SimpleTeaser .seenInTheShop a:hover,
-.DasOe_SimpleTeaser .seenInTheShop a:visited {
+
+.DasOe_SimpleTeaser .dividerDiv {
+    clear:both;
+    min-height:14px;
+    height:14px;
+}
+
+.DasOe_SimpleTeaser .dividerDiv,
+.DasOe_SimpleTeaser .dividerDiv a,
+.DasOe_SimpleTeaser .dividerDiv a:hover,
+.DasOe_SimpleTeaser .dividerDiv a:visited {
     font-family:Verdana,Helvetica,Arial,sans-serif;
     color:#888;
 }

@@ -4,3 +4,8 @@ prototype(DasOe.SimpleTeaser:Plugin) {
       controller = 'Standard'
       action = 'index'
 }
+
+page.body.parts.oeLoveTeaserFooter = TYPO3.Neos:Plugin {
+        package = 'DasOe.SimpleTeaser'
+        controller = 'Standard'
+}
