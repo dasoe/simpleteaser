@@ -35,6 +35,9 @@ class TeaserRepository extends Repository {
         $idArray = $queryGetIdsQ->execute();
         shuffle($idArray);
         $idList = '';
+        if (count($idArray) < $number) {
+            $number = count($idArray);
+        }
         for ($i = 0; $i < $number; $i++) {
             $idList .= '\'' . $idArray[$i]['Persistence_Object_Identifier'] . '\',';
         }
