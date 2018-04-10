@@ -18,6 +18,7 @@ class StandardController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 
     /**
      * @return void
+     * @Flow\SkipCsrfProtection
      */
     public function indexAction() {
         $teasers = $this->teaserRepository->getRandomEntities(6);
