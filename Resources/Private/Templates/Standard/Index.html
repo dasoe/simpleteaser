@@ -6,7 +6,10 @@
 <f:section name="Title">Teasers (<f:count>{teasers}</f:count>)</f:section>
 
 <f:section name="Content">
+    
+    <f:if condition="{f:count(subject: teasers)}>0" >
 
+    
     <f:if condition="{f:count(subject: teasers)}>4" >
 
         <div class="dividerDiv">
@@ -69,4 +72,5 @@
 
     </f:if> 
 
+    </f:if> 
 </f:section>

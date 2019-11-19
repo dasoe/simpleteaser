@@ -21,20 +21,24 @@ class StandardController extends \TYPO3\Flow\Mvc\Controller\ActionController {
      * @Flow\SkipCsrfProtection
      */
     public function indexAction() {
-        $teasers = $this->teaserRepository->getRandomEntities(6);
+        $teaserCount = $this->teaserRepository->findAll()->count();
 
-        $countLandscape = 0;
-        foreach ($teasers as $oneTeaser) {
-            if ($oneTeaser->getImage()->getWidth() / $oneTeaser->getImage()->getHeight() >= 1.3) {
-               // \TYPO3\FLOW\var_dump($oneTeaser->getImage()->getWidth() / $oneTeaser->getImage()->getHeight());
-                $countLandscape++;
+        if ($teaserCount) {
+            $teasers = $this->teaserRepository->getRandomEntities(6);
+
+            $countLandscape = 0;
+            foreach ($teasers as $oneTeaser) {
+                if ($oneTeaser->getImage()->getWidth() / $oneTeaser->getImage()->getHeight() >= 1.3) {
+                    // \TYPO3\FLOW\var_dump($oneTeaser->getImage()->getWidth() / $oneTeaser->getImage()->getHeight());
+                    $countLandscape++;
+                }
             }
+            // take one away if too many lanscapes (we know that it will be not enough space then)
+            if ($countLandscape > 4) {
+                unset($teasers[0]);
+            }
+            $this->view->assign('teasers', $teasers);
         }
-        if ($countLandscape > 4) {
-            unset($teasers[0]);
-        }
-
-        $this->view->assign('teasers', $teasers);
     }
 
 }
